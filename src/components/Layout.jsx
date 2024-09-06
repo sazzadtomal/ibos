@@ -6,7 +6,7 @@ const Layout = () => {
     return (
         <section className="">
             <Header/>
-            <main className="flex-grow min-h-[70vh]">
+            <main className="flex-grow mt-24 w-full xl:w-[80%] m-auto">
                 <Outlet />
             </main>
             <Footer/>

@@ -73,6 +73,14 @@ html{
   font-size: 1.7rem;
 }
 
+.button-cart{
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+
 
 .border-input{
   border: 1px solid #DEDEDE ;
