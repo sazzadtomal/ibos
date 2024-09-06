@@ -4,6 +4,12 @@ import UserManagement from "./components/UserManagement"
 import Signup from "./components/Signup/Signup"
 import Login from "./components/Login/Login"
 import Products from "./components/Products"
+import Cart from "./components/Cart"
+import Home from "./components/Home"
+import Custom from "./components/Custom"
+import Blog from "./components/Blog"
+import Categories from "./components/Categories"
+import Error from "./components/Error"
 
 function App() {
   return (
@@ -12,11 +18,17 @@ function App() {
         <Route path="user_management" element={<UserManagement/>}>
            <Route path="signup" element={<Signup/>}/>
            <Route path="login" element={<Login/>}/>
-           <Route path="*" element={<div>Error404</div>} />
+           <Route path="*" element={<Error/>} />
         </Route>
 
-        <Route path="/" element={<Layout/>}>
+        <Route path="/" element={<Layout/>}> 
+            <Route index element={<Home/>}/>
             <Route path="products" element={<Products/>}/>
+            <Route path="categories" element={<Categories/>}/>
+            <Route path="blog" element={<Blog/>}/>
+            <Route path="custom" element={<Custom/>}/>
+            <Route path="cart" element={<Cart/>}/>
+            <Route path="*" element={<Error/>} />
         </Route>
 
 

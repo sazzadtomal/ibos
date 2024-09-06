@@ -1,6 +1,8 @@
 import LoginForm from "./LoginForm";
 import LoginHeader from "./LoginHeader";
 import Oauth from "../FormElements/Oauth";
+import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
     <div className="px-8 py-12 flex flex-col form-background w-full xl:w-[50%]">
@@ -10,10 +12,10 @@ const Login = () => {
 
       <section className="user-management-action">
         Don't have an account?{" "}
-        <a className="hyperlink" href="">
+        <Link to="/user_management/signup" className="hyperlink">
           {" "}
           Sign up
-        </a>
+        </Link>
       </section>
     </div>
   );
