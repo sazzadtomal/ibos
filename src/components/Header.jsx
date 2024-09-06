@@ -7,7 +7,7 @@ const headerNav=["Home","Products","Categories","Custom","Blog"]
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full h-24 flex justify-center items-center border-header">
+    <header className="fixed top-0 w-full h-24 header flex justify-center items-center border-header">
         <nav className='w-full xl:w-[80%] flex items-center justify-between'>
             <Logo/>
             <ul className='flex [&>*]:mx-16 text-[1.8rem] font-medium justify-evenly'>

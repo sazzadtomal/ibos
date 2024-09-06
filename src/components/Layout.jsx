@@ -4,12 +4,14 @@ import Footer from "./Footer"
 
 const Layout = () => {
     return (
-        <main>
+        <section className="">
             <Header/>
-            <Outlet />
+            <main className="flex-grow min-h-[70vh]">
+                <Outlet />
+            </main>
             <Footer/>
             
-        </main>
+        </section>
     )
 }
 

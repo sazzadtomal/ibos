@@ -17,6 +17,11 @@ html{
 }
 
 
+.header{
+  background-color: white;
+}
+
+
 
 .user-management-background{
   background-image: url("/ibos_chair.png");

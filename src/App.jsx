@@ -3,6 +3,7 @@ import Layout from "./components/Layout"
 import UserManagement from "./components/UserManagement"
 import Signup from "./components/Signup/Signup"
 import Login from "./components/Login/Login"
+import Products from "./components/Products"
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         </Route>
 
         <Route path="/" element={<Layout/>}>
-              
+            <Route path="products" element={<Products/>}/>
         </Route>
 
 
