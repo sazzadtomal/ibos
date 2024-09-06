@@ -1,7 +1,12 @@
 import CartItem from "./CartItem";
 import CheckoutDetails from "./CheckoutDetails";
+import { CartContext } from "../context/CartProvider";
+import { useContext } from "react";
 
 const Cart = () => {
+
+  const {item}=useContext(CartContext)
+
   return (
     <section className="flex mt-48 gap-32 ">
       <main className="flex-grow min-h-[70vh]">
@@ -9,7 +14,7 @@ const Cart = () => {
           An overview of your order
         </h2>
         <div>
-          <CartItem />
+          {item.map((product)=><CartItem {...product} />)}
         </div>
       </main>
       <aside className=" basis-1/3 font-medium text-[2.2rem] pr-16 shrink-0">

@@ -59,7 +59,7 @@ const Footer = () => {
         <section className="flex items-center border-t border-t-[#252948] py-8 pb-16 justify-evenly">
           <div className="flex [&>*]:px-4">
             {socialIcons.map((item) => (
-              <img src={item.src} alt={item.alt} />
+              <img key={item.src} src={item.src} alt={item.alt} />
             ))}
           </div>
           <ul className="flex [&>*]:px-8  justify-evenly">

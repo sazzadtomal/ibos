@@ -1,5 +1,8 @@
+import { CartContext } from "../context/CartProvider"
+import { useContext } from "react"
 
 const CheckoutDetails = () => {
+  const {totalAmount}=useContext(CartContext)
   return (
     <>
     <h2 className="text-[2.8rem] font-semibold mb-8 ">Oder details</h2>
@@ -7,7 +10,7 @@ const CheckoutDetails = () => {
                  <div className="[&>*]:my-6">
                      <div className="flex justify-between">
                         <span>Subtotal</span>
-                        <span>€ 1071.00</span>
+                        <span>€ {totalAmount}</span>
                      </div>
                      <div className="flex justify-between">
                         <span>Shipping</span>
@@ -22,7 +25,7 @@ const CheckoutDetails = () => {
 
                  <div className="flex justify-between py-8 text-[2.4rem] text-black font-semibold">
                  <span>Total</span>
-                 <span>€ 1071.00</span>
+                 <span>€ {totalAmount}</span>
                  </div>
             </div>
             <button className="button button-primary w-full mt-8">Go to Checkout</button>

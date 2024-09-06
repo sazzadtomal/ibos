@@ -1,13 +1,13 @@
 import Oauth from "../FormElements/Oauth";
-import LoginHeader from "./SignupHeader";
-import LoginForm from "./SignupForm";
+import SignupHeader from "./SignupHeader";
+import SignupForm from "./SignupForm";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
     <div className="px-8 py-12 flex flex-col form-background w-full xl:w-[50%]">
-      <LoginHeader />
-      <LoginForm />
+      <SignupHeader />
+      <SignupForm />
       <Oauth />
       <section className="user-management-action">
         Have and account?{" "}

@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const FormInput = ({id,label,type,value,onChange}) => {
   return (

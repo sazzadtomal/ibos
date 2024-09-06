@@ -10,6 +10,7 @@ import Custom from "./components/Custom"
 import Blog from "./components/Blog"
 import Categories from "./components/Categories"
 import Error from "./components/Error"
+import RequireAuth from "./components/RequireAuth"
 
 function App() {
   return (
@@ -21,14 +22,16 @@ function App() {
            <Route path="*" element={<Error/>} />
         </Route>
 
-        <Route path="/" element={<Layout/>}> 
-            <Route index element={<Home/>}/>
-            <Route path="products" element={<Products/>}/>
-            <Route path="categories" element={<Categories/>}/>
-            <Route path="blog" element={<Blog/>}/>
-            <Route path="custom" element={<Custom/>}/>
-            <Route path="cart" element={<Cart/>}/>
-            <Route path="*" element={<Error/>} />
+        <Route element={<RequireAuth/>}>
+          <Route path="/" element={<Layout/>}>
+              <Route index element={<Home/>}/>
+              <Route path="products" element={<Products/>}/>
+              <Route path="categories" element={<Categories/>}/>
+              <Route path="blog" element={<Blog/>}/>
+              <Route path="custom" element={<Custom/>}/>
+              <Route path="cart" element={<Cart/>}/>
+              <Route path="*" element={<Error/>} />
+          </Route>
         </Route>
 
 
