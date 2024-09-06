@@ -1,6 +1,9 @@
 import Logo from "./Logo_small"
-import cart from "../assets/icons/added.png"
+import CartIcon from "./CartIcon"
 import user from "../assets/icons/user.png"
+
+
+const headerNav=["Home","Products","Categories","Custom","Blog"]
 
 const Header = () => {
   return (
@@ -8,18 +11,11 @@ const Header = () => {
         <nav className='w-full xl:w-[80%] flex items-center justify-between'>
             <Logo/>
             <ul className='flex [&>*]:mx-16 text-[1.8rem] font-medium justify-evenly'>
-                <li>Home</li>
-                <li>Products</li>
-                <li>Categories</li>
-                <li>Custom</li>
-                <li>Blog</li>
+                {headerNav.map((item)=><li key={item}>{item}</li>)}
             </ul>
 
             <div className="flex items-center gap-8">
-                <div className="relative flex shrink-0 ">
-                    <img className="w-12 h-12 shrink-0" src={cart} alt="" />
-                    <div className="absolute w-6 h-6 flex justify-center top-8 left-6 rounded-full bg-black text-white">2</div>
-                </div>
+                <CartIcon/>
                 <img className="shrink-0" src={user} alt="" />
             </div>
 
