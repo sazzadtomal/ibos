@@ -12,13 +12,13 @@ const Oauth = () => {
     <div className="flex w-full gap-5 text-[1.2rem] font-medium my-4">
        <div className="flex flex-grow  border justify-center items-center button ">
         <div className="flex gap-5" >
-          <img src={google} alt="" />
+          <img src={google} alt="google" />
           <button >Sign in with Google</button>
         </div>
         </div>
        <div className="flex flex-grow border justify-center items-center button">
         <div className="flex gap-5">
-          <img src={apple} alt="" />
+          <img src={apple} alt="apple" />
           <button >Sign in with Google</button>
         </div>
         </div> 

@@ -1,11 +1,11 @@
+import useCart from "../../hooks/useCart";
 import CartItem from "../Cart/CartItem";
 import CheckoutDetails from "../Cart/CheckoutDetails";
-import { CartContext } from "../../context/CartProvider";
-import { useContext } from "react";
+
 
 const Cart = () => {
 
-  const {item}=useContext(CartContext)
+  const {item}=useCart()
 
   return (
     <section className="flex mt-48 gap-32 ">

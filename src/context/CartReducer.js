@@ -1,3 +1,11 @@
+
+
+
+
+export const initializer = (initialValue) =>{
+  return JSON.parse(localStorage.getItem("localCart")) || initialValue;
+}
+
 export const cartReducer = (state, action) => {
   if (action.type === "ADD_ITEM") {
     const exist = state.item.find((curElem) => curElem.id === action.payload.id);

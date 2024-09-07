@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useEffect} from "react";
-import { cartReducer } from "./CartReducer";
+import { cartReducer,initializer } from "./CartReducer";
 
 export const CartContext = createContext();
 
@@ -10,7 +10,7 @@ const initialState = {
 };
 
 const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
+  const [state, dispatch] = useReducer(cartReducer, initialState,initializer);
 
   const addItem = (id) => {
     return dispatch({
@@ -48,10 +48,20 @@ const CartProvider = ({ children }) => {
     });
   };
 
-  // we will use the useEffect to update the data
+
+  useEffect(() => {
+    localStorage.setItem("localCart", JSON.stringify(state));
+  }, [state]);
+
+
+
   useEffect(() => {
     dispatch({ type: "GET_TOTAL" });
   }, [state.item]);
+
+
+
+
 
   return (
     <CartContext.Provider

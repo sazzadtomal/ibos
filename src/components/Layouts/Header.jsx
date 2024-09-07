@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import useLogout from "../../hooks/useLogout";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import useCart from "../../hooks/useCart";
 
 const headerNav = [
   { text: "Home", path: "/" },
@@ -18,9 +19,11 @@ const Header = () => {
   const {auth} = useAuth();
   const logout=useLogout()
   const navigate = useNavigate();
+  const {clearCart}=useCart()
 
   const signOut = async () => {
     await logout();
+    clearCart()
     navigate("/user_management/login");
 }
 
@@ -44,7 +47,7 @@ const Header = () => {
 
         <div className="flex items-center gap-8">
           <CartIcon />
-          <img className="shrink-0" src={user} alt="" />
+          <img className="shrink-0" src={user} alt="user" />
           {auth?.accessToken &&  <div onClick={()=>signOut()} className="text-[1.4rem] cursor-pointer font-medium">Logout</div>}
         </div>
       </nav>

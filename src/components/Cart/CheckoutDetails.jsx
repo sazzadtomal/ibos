@@ -1,8 +1,7 @@
-import { CartContext } from "../../context/CartProvider"
-import { useContext } from "react"
+import useCart from "../../hooks/useCart"
 
 const CheckoutDetails = () => {
-  const {totalAmount}=useContext(CartContext)
+  const {totalAmount}=useCart()
   return (
     <>
     <h2 className="text-[2.8rem] font-semibold mb-8 ">Oder details</h2>

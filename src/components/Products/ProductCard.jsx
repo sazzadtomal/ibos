@@ -1,8 +1,7 @@
-import { CartContext } from "../../context/CartProvider";
-import { useContext } from "react";
+import useCart from "../../hooks/useCart";
 
 const ProductCard = ({ id, title, desc, price, image }) => {
-  const { addItem } = useContext(CartContext);
+  const { addItem } = useCart();
 
   return (
     <div className=" text-[1.8rem] basis-1/3 max-w-[33.3%] flex justify-center mb-24">
@@ -10,14 +9,14 @@ const ProductCard = ({ id, title, desc, price, image }) => {
         <img
           className="h-[25rem] w-[25rem] mb-8 rounded-2xl overflow-hidden object-contain"
           src={image}
-          alt=""
+          alt={title}
         />
         <div className="max-w-[25rem] mb-4">
           <div className="font-semibold mb-2">{title.length > 50 ? `${title.substring(0, 50)}...` : title}</div>
           <div className="flex justify-between">
             <span className="font-bold">€{price}</span>
             <span>
-              <s className="text-[#ABABAB] font-medium">€{price + 100}</s>
+              <s className="muted font-medium">€{price + 100}</s>
             </span>
             <span className="font-semibold text-[#B92E2E]">30% OFF</span>
           </div>

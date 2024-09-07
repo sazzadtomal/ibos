@@ -114,6 +114,11 @@ html{
   font-size: 1.4rem;
 }
 
+
+button:hover{
+  scale: 1.05;
+}
+
 button:disabled,
 button[disabled]{
   background-color: #cccccc;

@@ -10,7 +10,7 @@ const UserManagement = () => {
       </div>
       <div className="basis-1/2 max-w-[50%] user-management-background flex justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-4 text-[1.6rem] text-white 2xl:mx-[22rem]">
-          <img src={icon} alt="" />
+          <img src={icon} alt="icon" />
           <Logo variant="white"/>
           <p className="text-center ">
             Discover a seamless shopping experience with our curated collection of

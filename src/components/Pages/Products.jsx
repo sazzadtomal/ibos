@@ -41,7 +41,7 @@ useEffect(() => {
  
   return (
     <section className="flex mt-48 ">
-      <aside className="font-medium text-[2.2rem] text-[#717171] border-r pr-16 min-h-[70vh] shrink-0">
+      <aside className="font-medium text-[2.2rem] muted border-r pr-16 min-h-[70vh] shrink-0">
         <ul className="[&>*]:px-8 [&>*]:py-2  [&>*]:m-8 ">
           {aside.map((item)=><li key={item}>{item}</li>)}
         </ul>
