@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import icon from "../assets/icons/icon.png";
-import Logo from "./Logo_big"
+import icon from "../../assets/icons/icon.png";
+import Logo from "../Logo/Logo_big"
 
 const UserManagement = () => {
   return (

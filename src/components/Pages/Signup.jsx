@@ -1,6 +1,6 @@
 import Oauth from "../FormElements/Oauth";
-import SignupHeader from "./SignupHeader";
-import SignupForm from "./SignupForm";
+import SignupHeader from "../Signup/SignupHeader";
+import SignupForm from "../Signup/SignupForm";
 import { Link } from "react-router-dom";
 
 const Signup = () => {

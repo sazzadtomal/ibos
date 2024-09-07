@@ -1,11 +1,11 @@
-import { CartContext } from "../context/CartProvider";
+import { CartContext } from "../../context/CartProvider";
 import { useContext } from "react";
 
 const ProductCard = ({ id, title, desc, price, image }) => {
   const { addItem } = useContext(CartContext);
 
   return (
-    <div className=" text-[1.8rem] basis-1/3 max-w-[33.3%] flex justify-center mb-6">
+    <div className=" text-[1.8rem] basis-1/3 max-w-[33.3%] flex justify-center mb-24">
       <div className=" flex flex-col border p-4 max-w-[27rem] rounded-2xl">
         <img
           className="h-[25rem] w-[25rem] mb-8 rounded-2xl overflow-hidden object-contain"

@@ -1,3 +1,8 @@
+
+
+const style="p-4 flex justify-center items-center border"
+
+
 const Pagination = ({ postsPerPage, totalPosts, paginate,currentPage}) => {
     const pageNumbers = [];
 
@@ -24,15 +29,15 @@ const Pagination = ({ postsPerPage, totalPosts, paginate,currentPage}) => {
     return (
      
         <ul className='flex text-[1.4] muted [&>*]:cursor-pointer'>
-          <div onClick={handlePrevious} className={`${currentPage>1 ? "text-black" : " " } p-2 flex justify-center items-center border`}>{"<"}</div>
+          <div onClick={handlePrevious} className={`${currentPage>1 ? "text-black" : " " } ${style} `}>{"<"}</div>
           {pageNumbers.map(number => (
             <li key={number}>
-              <div onClick={() => paginate(number)} className={`${number==currentPage ? "text-black" : " "} p-2 flex justify-center items-center border`} >
+              <div onClick={() => paginate(number)} className={`${number==currentPage ? "text-black" : " "} ${style}`} >
                 {number}
               </div>
             </li>
           ))}
-          <div onClick={handleNext} className={`${currentPage<total_pages ? "text-black" : "" } p-2 flex justify-center items-center border`} >{">"}</div>
+          <div onClick={handleNext} className={`${currentPage<total_pages ? "text-black" : "" } ${style}`} >{">"}</div>
         </ul>
 
         

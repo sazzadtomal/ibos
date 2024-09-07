@@ -1,5 +1,5 @@
-import close from "../assets/icons/close.png"
-import { CartContext } from "../context/CartProvider"
+import close from "../../assets/icons/close.png"
+import { CartContext } from "../../context/CartProvider"
 import { useContext } from "react"
 
 const CartItem = ({id,title,image,price,quantity}) => {

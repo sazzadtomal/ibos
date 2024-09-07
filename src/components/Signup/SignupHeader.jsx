@@ -1,4 +1,4 @@
-import Logo from "../Logo_big";
+import Logo from "../Logo/Logo_big";
 
 const LoginHeader = () => {
   return (

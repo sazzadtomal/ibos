@@ -1,6 +1,6 @@
-import cart from "../assets/icons/added.png"
+import cart from "../../assets/icons/added.png"
 import { Link } from "react-router-dom"
-import { CartContext } from "../context/CartProvider"
+import { CartContext } from "../../context/CartProvider"
 import { useContext } from "react"
 
 const CartIcon = () => {

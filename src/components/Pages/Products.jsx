@@ -1,7 +1,7 @@
-import ProductCard from "./ProductCard";
+import ProductCard from "../Products/ProductCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Pagination from "./Pagination";
+import Pagination from "../Products/Pagination";
 
 const aside = ["Rocking chair", "Side chair", "Lounge chair"];
 

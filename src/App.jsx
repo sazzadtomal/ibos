@@ -1,18 +1,20 @@
 import { Routes,Route } from "react-router-dom"
-import Layout from "./components/Layout"
-import UserManagement from "./components/UserManagement"
-import Signup from "./components/Signup/Signup"
-import Login from "./components/Login/Login"
-import Products from "./components/Products"
-import Cart from "./components/Cart"
-import Home from "./components/Home"
-import Custom from "./components/Custom"
-import Blog from "./components/Blog"
-import Categories from "./components/Categories"
-import Error from "./components/Error"
-import RequireAuth from "./components/RequireAuth"
+import Layout from "./components/Layouts/Layout"
+import UserManagement from "./components/Layouts/UserManagement"
+import Signup from "./components/Pages/Signup"
+import Login from "./components/Pages/Login"
+import Products from "./components/Pages/Products"
+import Cart from "./components/Pages/Cart"
+import Home from "./components/Pages/Home"
+import Custom from "./components/Pages/Custom"
+import Blog from "./components/Pages/Blog"
+import Categories from "./components/Pages/Categories"
+import Error from "./components/Pages/Error"
+import RequireAuth from "./components/Authorization/RequireAuth"
+import PersistLogin from "./components/Authorization/PersistLogin"
 import { useLocation } from "react-router-dom"
 import { useEffect } from "react"
+
 
 function App() {
   const {pathname}=useLocation();
@@ -30,15 +32,17 @@ function App() {
            <Route path="*" element={<Error/>} />
         </Route>
 
-        <Route element={<RequireAuth/>}>
-          <Route path="/" element={<Layout/>}>
-              <Route index element={<Home/>}/>
-              <Route path="products" element={<Products/>}/>
-              <Route path="categories" element={<Categories/>}/>
-              <Route path="blog" element={<Blog/>}/>
-              <Route path="custom" element={<Custom/>}/>
-              <Route path="cart" element={<Cart/>}/>
-              <Route path="*" element={<Error/>} />
+        <Route element={<PersistLogin/>}>
+          <Route element={<RequireAuth/>}>
+            <Route path="/" element={<Layout/>}>
+                <Route index element={<Home/>}/>
+                <Route path="products" element={<Products/>}/>
+                <Route path="categories" element={<Categories/>}/>
+                <Route path="blog" element={<Blog/>}/>
+                <Route path="custom" element={<Custom/>}/>
+                <Route path="cart" element={<Cart/>}/>
+                <Route path="*" element={<Error/>} />
+            </Route>
           </Route>
         </Route>
 

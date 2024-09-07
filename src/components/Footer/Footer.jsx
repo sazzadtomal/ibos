@@ -1,9 +1,9 @@
-import Logo from "./Logo_small";
-import fb from "../assets/icons/fb.png";
-import instagram from "../assets/icons/instagram.png";
-import linkedin from "../assets/icons/linkedin.png";
-import twitter from "../assets/icons/new-twitter.png";
-import us from "../assets/icons/us.png";
+import Logo from "../Logo/Logo_small";
+import fb from "../../assets/icons/fb.png";
+import instagram from "../../assets/icons/instagram.png";
+import linkedin from "../../assets/icons/linkedin.png";
+import twitter from "../../assets/icons/new-twitter.png";
+import us from "../../assets/icons/us.png";
 import FooterList from "./FooterList";
 
 const aboutUs = [

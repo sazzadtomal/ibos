@@ -1,6 +1,6 @@
-import CartItem from "./CartItem";
-import CheckoutDetails from "./CheckoutDetails";
-import { CartContext } from "../context/CartProvider";
+import CartItem from "../Cart/CartItem";
+import CheckoutDetails from "../Cart/CheckoutDetails";
+import { CartContext } from "../../context/CartProvider";
 import { useContext } from "react";
 
 const Cart = () => {

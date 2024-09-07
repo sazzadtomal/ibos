@@ -1,15 +1,16 @@
 import PassowordElement from "../FormElements/PassowordElement";
 import FormElement from "../FormElements/FormInput";
 import TermsPolicy from "../FormElements/TermsPolicy";
-import { useState, useContext, useEffect } from "react";
-import AuthContext from "../../context/AuthProvider";
+import { useState, useEffect } from "react";
+import useAuth from "../../hooks/useAuth";
+
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 
 const EmailREGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const LoginForm = () => {
-  const {setAuth } = useContext(AuthContext);
+  const {setAuth } = useAuth();
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");

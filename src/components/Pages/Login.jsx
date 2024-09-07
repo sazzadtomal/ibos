@@ -1,5 +1,5 @@
-import LoginForm from "./LoginForm";
-import LoginHeader from "./LoginHeader";
+import LoginForm from "../Login/LoginForm";
+import LoginHeader from "../Login/LoginHeader";
 import Oauth from "../FormElements/Oauth";
 import { Link } from "react-router-dom";
 const Login = () => {

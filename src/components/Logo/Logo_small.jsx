@@ -1,4 +1,4 @@
-import icon from "../assets/icons/icon.png"
+import icon from "../../assets/icons/icon.png"
 
 const Logo = ({variant}) => {
 
