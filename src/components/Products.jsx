@@ -10,6 +10,11 @@ const Products = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(6);
 
+
+  useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), [currentPage]);
+
+
+
 useEffect(() => {
     const fetchData = async () => {
       try {
