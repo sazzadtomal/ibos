@@ -5,10 +5,10 @@ import Logo from "../Logo/Logo_big"
 const UserManagement = () => {
   return (
     <div className="flex h-screen w-screen ">
-      <div className="flex justify-center items-center basis-1/2 max-w-[50%]">
+      <div className="flex justify-center items-center w-full lg:basis-1/2 lg:max-w-[50%]">
         <Outlet />
       </div>
-      <div className="basis-1/2 max-w-[50%] user-management-background flex justify-center items-center">
+      <div className="hidden lg:flex basis-1/2 max-w-[50%] user-management-background  justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-4 text-[1.6rem] text-white 2xl:mx-[22rem]">
           <img src={icon} alt="icon" />
           <Logo variant="white"/>
