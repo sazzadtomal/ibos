@@ -52,12 +52,15 @@ To get started with the project, follow the instructions below.
    cd ibos
 
 3. Install dependencies:
-   ```bash
+   ```bash 
    npm install
 
-
 ### Running the Application
-  ```bash npm run dev
+
+1. Enter command:
+   ```bash
+   npm run dev
+ 
 
 
 
