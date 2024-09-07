@@ -107,7 +107,7 @@ const SignupForm = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="w-full button button-primary"
+          className="w-full button button-primary text-[1.7rem]"
           disabled={validEmail && pwd && terms ? false : true}
         >
           Signup

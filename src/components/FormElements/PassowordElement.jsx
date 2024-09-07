@@ -3,7 +3,7 @@ import { MdVisibility } from "react-icons/md";
 
 const PassowordElement = ({value,onChange,showPwd,setShowPwd}) => {
   return (
-    <div className="flex bg-white items-center border-input rounded-[5px] overflow-hidden px-4 py-2">
+    <div className="flex bg-white items-center border rounded-[5px] overflow-hidden px-4 py-2">
     <div className="flex-grow">
       <label htmlFor="password" className="block muted text-[1.2rem]">
         Password

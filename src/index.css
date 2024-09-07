@@ -2,37 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
-
-.logo-accent{
-  color: #1E99F5;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-
-.header{
+.header {
   background-color: white;
 }
 
+.footer {
+  background-color: #0e0e0e;
+  color: #81859f;
+}
 
+.hyperlink {
+  color: #0f3dde;
+}
 
-.user-management-background{
+.logo-accent {
+  color: #1e99f5;
+}
+
+.border {
+  border: 1px solid #dedede;
+}
+
+.border-header {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* Button */
+
+.button {
+  padding: 1.25rem 0;
+  border-radius: 0.75rem;
+}
+
+.button-primary {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  scale: 1.05;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+}
+
+/* User Management */
+
+.user-management-background {
   background-image: url("/ibos_chair.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
- }
+}
 
-
-
-
-.user-management-action{
+.user-management-action {
   width: 100%;
   font-size: 1.4rem;
   display: flex;
@@ -42,62 +85,23 @@ html{
   justify-content: center;
 }
 
-.form-background{
-  background-color: #FAFAFA;
+.form-background {
+  background-color: #fafafa;
 }
 
-.order-border{
-  border:1px solid #DEDEDE;
+/* functional */
+
+.active {
+  background-color: #f8f8f8;
 }
 
-.line{
-  background-color: #F1F0F0;
+.muted {
+  color: #707070;
+}
+
+.line {
+  background-color: #f1f0f0;
   height: 0.25rem;
-
-}
-
-.muted{
-  color:#707070
-}
-
-.hyperlink{
-  color:#0F3DDE
-}
-
-
-.button{
-  padding:1.25rem 0;
-  border-radius: 0.75rem;
-}
-
-.button-primary{
-  background-color: black;
-  color: white;
-  font-weight: 600;
-  font-size: 1.7rem;
-}
-
-.button-cart{
-  background-color: black;
-  color: white;
-  font-weight: 600;
-  font-size: 1.6rem;
-}
-
-
-
-.border-input{
-  border: 1px solid #DEDEDE ;
-}
-
-.border-header{
-  border-bottom: 1px solid #F1F1F1;
-}
-
-
-.footer{
-  background-color: #0E0E0E;
-  color: #81859F;
 }
 
 .offscreen {
@@ -114,37 +118,11 @@ html{
   font-size: 1.4rem;
 }
 
-
-button:hover{
-  scale: 1.05;
-}
-
-button:disabled,
-button[disabled]{
-  background-color: #cccccc;
-  
-}
-
-.active{
-  background-color: #F8F8F8;
-}
-
-
-
-body{
-  margin: 0;
-  padding: 0;
-  font-family: "Barlow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
+/* Loaing Animation */
 
 .lds-ripple {
   /* change color here */
-  color: #1c4c5b
+  color: #1c4c5b;
 }
 .lds-ripple,
 .lds-ripple div {

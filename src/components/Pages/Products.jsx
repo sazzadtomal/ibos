@@ -41,13 +41,13 @@ useEffect(() => {
  
   return (
     <section className="flex mt-48 ">
-      <aside className="font-medium text-[2.2rem] muted border-r pr-16 min-h-[70vh] shrink-0">
+      <aside className="hidden lg:block font-medium text-[2.2rem] muted border-r pr-8 2xl:pr-24 min-h-[70vh] shrink-0">
         <ul className="[&>*]:px-8 [&>*]:py-2  [&>*]:m-8 ">
           {aside.map((item)=><li key={item}>{item}</li>)}
         </ul>
       </aside>
-      <main className="mx-48 flex-grow">
-        <section className="flex flex-wrap flex-grow  mb-8">
+      <main className="mx-4 md:mx-16 2xl:mx-48 flex-grow">
+        <section className="flex flex-wrap flex-grow mb-8">
              {currentProducts.map((product)=><ProductCard key={product.title} id={product.id} title={product.title} price={product.price} image={product.image} desc={product.description} />)}
         </section>
         <section>

@@ -29,9 +29,11 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full h-24 header flex justify-center items-center border-header z-50">
-      <nav className="w-full xl:w-[80%] flex items-center justify-between">
-        <Logo />
-        <ul className="flex [&>*]:mx-16 text-[1.8rem] font-medium justify-evenly">
+      <nav className="w-full xl:w-[80%] flex items-center justify-between px-0 md:px-16">
+        <div className="hidden md:block">
+          <Logo />
+        </div>
+        <ul className="flex mx-4 lg:[&>*]:mx-16 text-[1.2rem] xl:text-[1.8rem] flex-grow  font-medium justify-evenly lg:justify-center items-center">
           {headerNav.map((item) => (
             <li key={item.path}>
               <NavLink
@@ -45,10 +47,10 @@ const Header = () => {
           ))}
         </ul>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-8 mx-4">
           <CartIcon />
-          <img className="shrink-0" src={user} alt="user" />
-          {auth?.accessToken &&  <div onClick={()=>signOut()} className="text-[1.4rem] cursor-pointer font-medium">Logout</div>}
+          <img className="hidden xl:block shrink-0 h-10 w-10 lg:h-12  lg:w-12" src={user} alt="user" />
+          {auth?.accessToken &&  <div onClick={()=>signOut()} className="xl:text-[1.4rem] text-[1.2rem] cursor-pointer font-medium">Logout</div>}
         </div>
       </nav>
     </header>

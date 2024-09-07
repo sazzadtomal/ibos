@@ -8,7 +8,7 @@ const CartItem = ({id,title,image,price,quantity}) => {
     <div className="relative form-background px-8 pt-16 rounded-lg">
                     <img onClick={()=>removeItem(id)} className="absolute top-6 right-8 cursor-pointer" src={close} alt="close" />
                        <div className=" flex items-center gap-8">
-                        <div className="flex items-center [&>*]:p-2 font-semibold border-input text-[2rem] rounded-lg">
+                        <div className="flex items-center [&>*]:p-2 font-semibold border text-[2rem] rounded-lg">
                             <div onClick={()=>decrement(id)} className="muted cursor-pointer">-</div>
                             <div>{quantity}</div>
                             <div onClick={()=>increment(id)} className="muted cursor-pointer">+</div>

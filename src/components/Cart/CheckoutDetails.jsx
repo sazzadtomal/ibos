@@ -5,7 +5,7 @@ const CheckoutDetails = () => {
   return (
     <>
     <h2 className="text-[2.8rem] font-semibold mb-8 ">Oder details</h2>
-            <div className="form-background px-6 p-4 order-border text-[2rem] muted rounded-lg">
+            <div className="form-background px-6 p-4 border text-[2rem] muted rounded-lg">
                  <div className="[&>*]:my-6">
                      <div className="flex justify-between">
                         <span>Subtotal</span>
@@ -27,7 +27,7 @@ const CheckoutDetails = () => {
                  <span>€ {totalAmount.toFixed(2)}</span>
                  </div>
             </div>
-            <button className="button button-primary w-full mt-8">Go to Checkout</button>
+            <button className="button button-primary text-[1.7rem] w-full mt-8">Go to Checkout</button>
             </>
   )
 }

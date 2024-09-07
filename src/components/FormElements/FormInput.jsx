@@ -2,7 +2,7 @@
 
 const FormInput = ({id,label,type,value,onChange}) => {
   return (
-    <div className="bg-white w-full border-input rounded-[5px] overflow-hidden px-[1rem] py-[0.5rem]">
+    <div className="bg-white w-full border rounded-[5px] overflow-hidden px-[1rem] py-[0.5rem]">
               <label htmlFor={id}  className="block muted text-[1.2rem]">
                 {label}
               </label>
