@@ -1,6 +1,6 @@
-import LoginForm from "../Login/LoginForm";
-import LoginHeader from "../Login/LoginHeader";
-import Oauth from "../FormElements/Oauth";
+import LoginForm from "../components/Login/LoginForm";
+import LoginHeader from "../components/Login/LoginHeader";
+import Oauth from "../components/FormElements/Oauth";
 import { Link } from "react-router-dom";
 const Login = () => {
   return (

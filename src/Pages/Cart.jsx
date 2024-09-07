@@ -1,6 +1,6 @@
-import useCart from "../../hooks/useCart";
-import CartItem from "../Cart/CartItem";
-import CheckoutDetails from "../Cart/CheckoutDetails";
+import useCart from "../hooks/useCart";
+import CartItem from "../components/Cart/CartItem";
+import CheckoutDetails from "../components/Cart/CheckoutDetails";
 
 
 const Cart = () => {
