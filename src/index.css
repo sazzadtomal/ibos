@@ -58,7 +58,7 @@ body {
   font-weight: 600;
 }
 
-button:hover {
+.button:hover {
   scale: 1.05;
 }
 

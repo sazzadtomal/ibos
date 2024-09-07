@@ -19,7 +19,7 @@ const Oauth = () => {
        <div className="flex flex-grow border justify-center items-center button">
         <div className="flex gap-5">
           <img src={apple} alt="apple" />
-          <button >Sign in with Google</button>
+          <button>Sign in with Google</button>
         </div>
         </div> 
     </div>
