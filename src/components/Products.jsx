@@ -43,14 +43,12 @@ useEffect(() => {
     <section className="flex mt-48 ">
       <aside className="font-medium text-[2.2rem] text-[#717171] border-r pr-16 min-h-[70vh] shrink-0">
         <ul className="[&>*]:px-8 [&>*]:py-2  [&>*]:m-8 ">
-          <li>Rocking chair</li>
-          <li>Side chair</li>
-          <li>Lounge chair</li>
+          {aside.map((item)=><li key={item}>{item}</li>)}
         </ul>
       </aside>
       <main className="mx-48 flex-grow">
         <section className="flex flex-wrap flex-grow  mb-8">
-             {currentProducts.map((product)=><ProductCard id={product.id} title={product.title} price={product.price} image={product.image} desc={product.description} />)}
+             {currentProducts.map((product)=><ProductCard key={product.title} id={product.id} title={product.title} price={product.price} image={product.image} desc={product.description} />)}
         </section>
         <section>
           <div className="w-full flex justify-center text-[1.4rem] font-bold mt-24">

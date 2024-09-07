@@ -14,7 +14,7 @@ const Cart = () => {
           An overview of your order
         </h2>
         <div>
-          {item.map((product)=><CartItem {...product} />)}
+          {item.map((product)=><CartItem key={product.title} {...product} />)}
         </div>
       </main>
       <aside className=" basis-1/3 font-medium text-[2.2rem] pr-16 shrink-0">

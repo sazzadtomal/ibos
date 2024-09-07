@@ -11,8 +11,16 @@ import Blog from "./components/Blog"
 import Categories from "./components/Categories"
 import Error from "./components/Error"
 import RequireAuth from "./components/RequireAuth"
+import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
 
 function App() {
+  const {pathname}=useLocation();
+
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  },[pathname])
+  
   return (
     <Routes>
       <Route path="/">
