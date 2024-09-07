@@ -44,12 +44,12 @@ To get started with the project, follow the instructions below.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/sazzadtomal/ibos.git
 
 
 2. Navigate to the project directory:
    ```bash
-   cd your-repo-name
+   cd ibos
 
 3. Install dependencies:
    ```bash
@@ -57,9 +57,7 @@ To get started with the project, follow the instructions below.
 
 
 ### Running the Application
-
-1. ```bash
-  npm run dev
+  ```bash npm run dev
 
 
 
